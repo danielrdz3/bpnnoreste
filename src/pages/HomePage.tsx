@@ -115,13 +115,13 @@ function HomePage() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-concrete text-charcoal">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-charcoal/10 bg-concrete/95 backdrop-blur-md">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-charcoal/10 bg-white/95 backdrop-blur-md">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
           <a href="#inicio" aria-label="BPN, ir al inicio" className="block">
             <img
-              src="/images/bpn-logo-primary.png"
+              src="/images/bpn-logo-symbol.png"
               alt="Bacheo y Pavimentos del Noreste"
-              className="h-11 w-auto"
+              className="h-11 w-28 object-cover mix-blend-multiply"
             />
           </a>
 
@@ -133,7 +133,7 @@ function HomePage() {
               <a
                 key={item.href}
                 href={item.href}
-                className="font-display text-sm font-bold uppercase tracking-wider transition-colors hover:text-orange"
+                className="font-display text-sm font-bold uppercase tracking-wider text-charcoal transition-colors hover:text-orange"
               >
                 {item.label}
               </a>
@@ -163,7 +163,7 @@ function HomePage() {
 
         {menuOpen && (
           <nav
-            className="border-t border-charcoal/10 bg-concrete px-6 py-6 lg:hidden"
+            className="border-t border-charcoal/10 bg-white px-6 py-6 lg:hidden"
             aria-label="Navegación móvil"
           >
             <div className="mx-auto flex max-w-7xl flex-col">
@@ -172,7 +172,7 @@ function HomePage() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="border-b border-charcoal/10 py-4 font-display text-lg font-bold uppercase tracking-wide"
+                  className="border-b border-charcoal/10 py-4 font-display text-lg font-bold uppercase tracking-wide text-charcoal"
                 >
                   {item.label}
                 </a>
@@ -241,14 +241,6 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="flex items-end lg:col-span-4 lg:justify-end">
-              <div className="border-l-2 border-orange pl-6">
-                <p className="font-tech text-5xl font-bold text-white">BPN</p>
-                <p className="mt-2 max-w-52 text-sm uppercase leading-relaxed tracking-wider text-white/60">
-                  Bacheo y Pavimentos del Noreste
-                </p>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -287,6 +279,18 @@ function HomePage() {
               <h2 className="font-display text-4xl font-bold uppercase leading-tight sm:text-6xl">
                 La mejor empresa de asfalto.
               </h2>
+              <div className="mt-10 aspect-[4/3] overflow-hidden bg-charcoal">
+                <video
+                  className="h-full w-full object-cover"
+                  src="/videos/bpn-tecnologia.mp4"
+                  aria-label="Proceso de reparación asfáltica de BPN"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                />
+              </div>
             </div>
             <div className="lg:col-span-6 lg:col-start-7">
               <p className="text-xl leading-relaxed text-charcoal/75 sm:text-2xl">
@@ -674,9 +678,9 @@ function HomePage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="flex flex-col justify-between gap-10 border-b border-white/15 pb-12 lg:flex-row lg:items-end">
             <img
-              src="/images/bpn-logo-white.png"
+              src="/images/bpn-logo-symbol-white.png"
               alt="Bacheo y Pavimentos del Noreste"
-              className="h-12 w-auto self-start"
+              className="h-12 w-32 object-cover mix-blend-screen self-start"
             />
             <nav
               className="flex flex-wrap gap-x-8 gap-y-4"

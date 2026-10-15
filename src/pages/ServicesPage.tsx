@@ -9,9 +9,9 @@ export default function ServicesPage() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
           <Link to="/" aria-label="BPN, regresar al inicio">
             <img
-              src="/images/bpn-logo-white.png"
+              src="/images/bpn-logo-symbol-white.png"
               alt="Bacheo y Pavimentos del Noreste"
-              className="h-11 w-auto"
+              className="h-11 w-28 object-cover mix-blend-screen"
             />
           </Link>
           <nav
